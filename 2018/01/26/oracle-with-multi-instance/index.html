@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.wyzwd.win">
-  <title>Archives: 2018 | 大道至简</title>
+  <title>一个oracle 用户下面创建多个实例 | 大道至简</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="大道至简">
-<meta property="og:url" content="http://blog.wyzwd.win/archives/2018/index.html">
+  <meta name="description" content="ERROR:ORA-28000: the account is locked 前言本文主要介绍了同一个oracle 用户下面如何重建多个oracle 实例。本文的测试环境为redhat 5.4，但该方法适应用大部分unix 系统（aix、hp-ux、suse linux等），本人也在AIX 5.3 系统上面实践过，通过此方法创建实例不存在任何问题。 环境介绍系统：centos 6.9 oracle">
+<meta name="keywords" content="oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个oracle 用户下面创建多个实例">
+<meta property="og:url" content="http://blog.wyzwd.win/2018/01/26/oracle-with-multi-instance/index.html">
 <meta property="og:site_name" content="大道至简">
+<meta property="og:description" content="ERROR:ORA-28000: the account is locked 前言本文主要介绍了同一个oracle 用户下面如何重建多个oracle 实例。本文的测试环境为redhat 5.4，但该方法适应用大部分unix 系统（aix、hp-ux、suse linux等），本人也在AIX 5.3 系统上面实践过，通过此方法创建实例不存在任何问题。 环境介绍系统：centos 6.9 oracle">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-26T10:43:45.035Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大道至简">
+<meta name="twitter:title" content="一个oracle 用户下面创建多个实例">
+<meta name="twitter:description" content="ERROR:ORA-28000: the account is locked 前言本文主要介绍了同一个oracle 用户下面如何重建多个oracle 实例。本文的测试环境为redhat 5.4，但该方法适应用大部分unix 系统（aix、hp-ux、suse linux等），本人也在AIX 5.3 系统上面实践过，通过此方法创建实例不存在任何问题。 环境介绍系统：centos 6.9 oracle">
   
     <link rel="alternative" href="/atom.xml" title="大道至简" type="application/atom+xml">
   
@@ -150,36 +155,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-oracle-with-multi-instance" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/26/oracle-with-multi-instance/" class="archive-article-date">
-  	<time datetime="2018-01-26T03:01:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/26/oracle-with-multi-instance/">一个oracle 用户下面创建多个实例</a>
+    <h1 class="article-title" itemprop="name">
+      一个oracle 用户下面创建多个实例
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/26/oracle-with-multi-instance/" class="archive-article-date">
+  	<time datetime="2018-01-26T03:01:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ERROR:<br>ORA-28000: the account is locked</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文主要介绍了同一个oracle 用户下面如何重建多个oracle 实例。本文的测试环境为redhat 5.4，但该方法适应用大部分unix 系统（aix、hp-ux、suse linux等），本人也在AIX 5.3 系统上面实践过，通过此方法创建实例不存在任何问题。</p>
+<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><p>系统：centos 6.9</p>
+<p>oracle 版本：11.2.0</p>
+<p>原实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">用户：oracle</span><br><span class="line"></span><br><span class="line">oracle sid: mmsp</span><br><span class="line"></span><br><span class="line">oracle_base: /home/app/oracle</span><br><span class="line"></span><br><span class="line">oracle_home: /home/app/oracle/product/11.2</span><br><span class="line"></span><br><span class="line">数据文件：/home/app/oracle/oradata/orcl</span><br><span class="line"></span><br><span class="line">参数文件：/home/app/oracle/product/11.2/dbs</span><br><span class="line"></span><br><span class="line">控制文件：/home/app/oracle/oradata/orcl</span><br><span class="line"></span><br><span class="line">归档路径：/home/app/oracle/arch/orcl</span><br></pre></td></tr></table></figure>
+<p>新实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">用户：oracle</span><br><span class="line"></span><br><span class="line">oracle sid: mmsp2</span><br><span class="line"></span><br><span class="line">oracle_base: /home/app/oracle</span><br><span class="line"></span><br><span class="line">oracle_home: /home/app/oracle/product/11.2</span><br><span class="line"></span><br><span class="line">数据文件：/home/app/oracle/oradata/mmsp2</span><br><span class="line"></span><br><span class="line">参数文件：/home/app/oracle/product/11.2/dbs</span><br><span class="line"></span><br><span class="line">控制文件：/home/app/oracle/oradata/mmsp2</span><br><span class="line"></span><br><span class="line">归档路径：/home/app/oracle/arch/mmsp2</span><br></pre></td></tr></table></figure>
+<h1 id="设置用户环境变量"><a href="#设置用户环境变量" class="headerlink" title="设置用户环境变量"></a>设置用户环境变量</h1><h1 id="安装新实例"><a href="#安装新实例" class="headerlink" title="安装新实例"></a>安装新实例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># dbca</span><br></pre></td></tr></table></figure>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>安装进度条执行到一半时提示：ORA-28000 account locked error。</p>
+<ol>
+<li>问题原因： oracle user was not part of dba group</li>
+<li>解决方案： usermod -a -G dba oracle</li>
+</ol>
+<h1 id="启动实例测试"><a href="#启动实例测试" class="headerlink" title="启动实例测试"></a>启动实例测试</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[oracle@dbs1 11.2]$ export ORACLE_SID=mmspbs</span><br><span class="line">[oracle@dbs1 11.2]$ sqlplus /nolog</span><br><span class="line"></span><br><span class="line">SQL*Plus: Release 11.2.0.4.0 Production on 星期五 1月 26 15:06:37 2018</span><br><span class="line"></span><br><span class="line">Copyright (c) 1982, 2013, Oracle.  All rights reserved.</span><br><span class="line"></span><br><span class="line">SQL&gt; conn sys/password as sysdba;</span><br><span class="line">Connected.</span><br><span class="line">SQL&gt; select instance_name from v$instance;</span><br><span class="line">SQL&gt; alter user sys identified by 1234;</span><br><span class="line"></span><br><span class="line">INSTANCE_NAME</span><br><span class="line">------------------------------------------------</span><br><span class="line">mmspbs</span><br></pre></td></tr></table></figure>
+<h1 id="数据库还原"><a href="#数据库还原" class="headerlink" title="数据库还原"></a>数据库还原</h1><p>export NLS_LANG=AMERICAN_AMERICA.ZHS16GBK<br>impdp \”sys/1234 as sysdba\” transform=segment_attributes:n DUMPFILE=bsexpdp_mmsp_20180126.dmp logfile=bsexpdp_mmsp_20180126.log FULL=y</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
+<li><a href="http://blog.csdn.net/olfisher/article/details/16983799" target="_blank" rel="noopener">impdp</a></li>
+</ol>
+<p>2  <a href="http://www.dba-oracle.com/t_impdp_transform_segment_attributes.htm" target="_blank" rel="noopener">impdp-transform</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,73 +235,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://blog.wyzwd.win/2018/01/26/oracle-with-multi-instance/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/19/blog-with-hexo-github/" class="archive-article-date">
-  	<time datetime="2018-01-19T06:22:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/19/blog-with-hexo-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">利用 hexo &amp; github 搭建博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/19/blog-with-hexo-github/">利用 hexo &amp; github 搭建博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境介绍"><span class="toc-number">2.</span> <span class="toc-text">环境介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置用户环境变量"><span class="toc-number">3.</span> <span class="toc-text">设置用户环境变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装新实例"><span class="toc-number">4.</span> <span class="toc-text">安装新实例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常"><span class="toc-number">4.1.</span> <span class="toc-text">异常</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动实例测试"><span class="toc-number">5.</span> <span class="toc-text">启动实例测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库还原"><span class="toc-number">6.</span> <span class="toc-text">数据库还原</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">6.1.</span> <span class="toc-text">参考链接</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/19/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-19T05:49:36.437Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/19/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -280,8 +370,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
