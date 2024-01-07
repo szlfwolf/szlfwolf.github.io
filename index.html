@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Coding is not just a skill; it&#39;s an art of creation and contemplation.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coding Musings">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Coding Musings">
+<meta property="og:description" content="Coding is not just a skill; it&#39;s an art of creation and contemplation.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="lfwolf">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/"/>
+
+
+
+
+
+  <title>Coding Musings</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Coding Musings</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Coding: Where art meets logic.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/07/know-about-OAuth-2-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Musings">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/01/07/know-about-OAuth-2-0/" itemprop="url">know about OAuth 2.0</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-07T23:47:30+08:00">
+                2024-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>W</p>
+<h2 id="理解-OAuth-2-0"><a href="#理解-OAuth-2-0" class="headerlink" title="理解 OAuth 2.0"></a>理解 OAuth 2.0</h2><p><a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/OAuth">OAuth</a>是一个关于授权（authorization）的开放网络标准，在全世界得到广泛应用，目前的版本是2.0版。</p>
+<p>本文对OAuth 2.0的设计思路和运行流程，做一个简明通俗的解释，主要参考材料为<a target="_blank" rel="noopener" href="http://www.rfcreader.com/#rfc6749">RFC 6749</a>。</p>
+<p><img src="/../images/oauth2.jpg" alt="oauth2"></p>
+<h2 id="一、应用场景"><a href="#一、应用场景" class="headerlink" title="一、应用场景"></a>一、应用场景</h2><p>为了理解OAuth的适用场合，让我举一个假设的例子。</p>
+<p>有一个”云冲印”的网站，可以将用户储存在Google的照片，冲印出来。用户为了使用该服务，必须让”云冲印”读取自己储存在Google上的照片。</p>
+<p><img src="/../images/print.jpg" alt="print"></p>
+<p>问题是只有得到用户的授权，Google才会同意”云冲印”读取这些照片。那么，”云冲印”怎样获得用户的授权呢？</p>
+<p>传统方法是，用户将自己的Google用户名和密码，告诉”云冲印”，后者就可以读取用户的照片了。这样的做法有以下几个严重的缺点。</p>
+<blockquote>
+<p>（1）”云冲印”为了后续的服务，会保存用户的密码，这样很不安全。</p>
+<p>（2）Google不得不部署密码登录，而我们知道，单纯的密码登录并不安全。</p>
+<p>（3）”云冲印”拥有了获取用户储存在Google所有资料的权力，用户没法限制”云冲印”获得授权的范围和有效期。</p>
+<p>（4）用户只有修改密码，才能收回赋予”云冲印”的权力。但是这样做，会使得其他所有获得用户授权的第三方应用程序全部失效。</p>
+<p>（5）只要有一个第三方应用程序被破解，就会导致用户密码泄漏，以及所有被密码保护的数据泄漏。</p>
+</blockquote>
+<p>OAuth就是为了解决上面这些问题而诞生的。</p>
+<h2 id="二、名词定义"><a href="#二、名词定义" class="headerlink" title="二、名词定义"></a>二、名词定义</h2><p>在详细讲解OAuth 2.0之前，需要了解几个专用名词。它们对读懂后面的讲解，尤其是几张图，至关重要。</p>
+<blockquote>
+<p>（1） Third-party application：第三方应用程序，本文中又称”客户端”（client），即上一节例子中的”云冲印”。</p>
+<p>（2）HTTP service：HTTP服务提供商，本文中简称”服务提供商”，即上一节例子中的Google。</p>
+<p>（3）Resource Owner：资源所有者，本文中又称”用户”（user）。</p>
+<p>（4）User Agent：用户代理，本文中就是指浏览器。</p>
+<p>（5）Authorization server：认证服务器，即服务提供商专门用来处理认证的服务器。</p>
+<p>（6）Resource server：资源服务器，即服务提供商存放用户生成的资源的服务器。它与认证服务器，可以是同一台服务器，也可以是不同的服务器。</p>
+</blockquote>
+<p>知道了上面这些名词，就不难理解，OAuth的作用就是让”客户端”安全可控地获取”用户”的授权，与”服务商提供商”进行互动。</p>
+<h2 id="三、OAuth的思路"><a href="#三、OAuth的思路" class="headerlink" title="三、OAuth的思路"></a>三、OAuth的思路</h2><p>OAuth在”客户端”与”服务提供商”之间，设置了一个授权层（authorization layer）。”客户端”不能直接登录”服务提供商”，只能登录授权层，以此将用户与客户端区分开来。”客户端”登录授权层所用的令牌（token），与用户的密码不同。用户可以在登录的时候，指定授权层令牌的权限范围和有效期。</p>
+<p>“客户端”登录授权层以后，”服务提供商”根据令牌的权限范围和有效期，向”客户端”开放用户储存的资料。</p>
+<h2 id="四、运行流程"><a href="#四、运行流程" class="headerlink" title="四、运行流程"></a>四、运行流程</h2><p>OAuth 2.0的运行流程如下图，摘自RFC 6749。</p>
+<p><img src="/../images/6a92a862da97a4692c755c7e186dfd07.jpg" alt="OAuth运行流程"></p>
+<blockquote>
+<p>（A）用户打开客户端以后，客户端要求用户给予授权。</p>
+<p>（B）用户同意给予客户端授权。</p>
+<p>（C）客户端使用上一步获得的授权，向认证服务器申请令牌。</p>
+<p>（D）认证服务器对客户端进行认证以后，确认无误，同意发放令牌。</p>
+<p>（E）客户端使用令牌，向资源服务器申请获取资源。</p>
+<p>（F）资源服务器确认令牌无误，同意向客户端开放资源。</p>
+</blockquote>
+<p>不难看出来，上面六个步骤之中，B是关键，即用户怎样才能给于客户端授权。有了这个授权以后，客户端就可以获取令牌，进而凭令牌获取资源。</p>
+<p>下面一一讲解客户端获取授权的四种模式。</p>
+<h2 id="五、客户端的授权模式"><a href="#五、客户端的授权模式" class="headerlink" title="五、客户端的授权模式"></a>五、客户端的授权模式</h2><p>客户端必须得到用户的授权（authorization grant），才能获得令牌（access token）。OAuth 2.0定义了四种授权方式。</p>
+<ul>
+<li>授权码模式（authorization code）</li>
+<li>简化模式（implicit）</li>
+<li>密码模式（resource owner password credentials）</li>
+<li>客户端模式（client credentials）</li>
+</ul>
+<h2 id="六、授权码模式"><a href="#六、授权码模式" class="headerlink" title="六、授权码模式"></a>六、授权码模式</h2><p>授权码模式（authorization code）是功能最完整、流程最严密的授权模式。它的特点就是通过客户端的后台服务器，与”服务提供商”的认证服务器进行互动。</p>
+<p><img src="/../images/8a16a81fbba3d6ba1002921bf6b4feff.jpg" alt="授权码模式"></p>
+<p>它的步骤如下：</p>
+<blockquote>
+<p>（A）用户访问客户端，后者将前者导向认证服务器。</p>
+<p>（B）用户选择是否给予客户端授权。</p>
+<p>（C）假设用户给予授权，认证服务器将用户导向客户端事先指定的”重定向URI”（redirection URI），同时附上一个授权码。</p>
+<p>（D）客户端收到授权码，附上早先的”重定向URI”，向认证服务器申请令牌。这一步是在客户端的后台的服务器上完成的，对用户不可见。</p>
+<p>（E）认证服务器核对了授权码和重定向URI，确认无误后，向客户端发送访问令牌（access token）和更新令牌（refresh token）。</p>
+</blockquote>
+<p>下面是上面这些步骤所需要的参数。</p>
+<p>A步骤中，客户端申请认证的URI，包含以下参数：</p>
+<ul>
+<li>response_type：表示授权类型，必选项，此处的值固定为”code”</li>
+<li>client_id：表示客户端的ID，必选项</li>
+<li>redirect_uri：表示重定向URI，可选项</li>
+<li>scope：表示申请的权限范围，可选项</li>
+<li>state：表示客户端的当前状态，可以指定任意值，认证服务器会原封不动地返回这个值。</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; GET /authorize?response_type=code&amp;client_id=s6BhdRkqt3&amp;state=xyz</span><br><span class="line">&gt;         &amp;redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1</span><br><span class="line">&gt; Host: server.example.com</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>C步骤中，服务器回应客户端的URI，包含以下参数：</p>
+<ul>
+<li>code：表示授权码，必选项。该码的有效期应该很短，通常设为10分钟，客户端只能使用该码一次，否则会被授权服务器拒绝。该码与客户端ID和重定向URI，是一一对应关系。</li>
+<li>state：如果客户端的请求中包含这个参数，认证服务器的回应也必须一模一样包含这个参数。</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; HTTP/1.1 302 Found</span><br><span class="line">&gt; Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA</span><br><span class="line">&gt;           &amp;state=xyz</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>D步骤中，客户端向认证服务器申请令牌的HTTP请求，包含以下参数：</p>
+</li>
+<li><p>grant_type：表示使用的授权模式，必选项，此处的值固定为”authorization_code”。</p>
+</li>
+<li><p>code：表示上一步获得的授权码，必选项。</p>
+</li>
+<li><p>redirect_uri：表示重定向URI，必选项，且必须与A步骤中的该参数值保持一致。</p>
+</li>
+<li><p>client_id：表示客户端ID，必选项。</p>
+</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; POST /token HTTP/1.1</span><br><span class="line">&gt; Host: server.example.com</span><br><span class="line">&gt; Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW</span><br><span class="line">&gt; Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt;</span><br><span class="line">&gt; grant_type=authorization_code&amp;code=SplxlOBeZQQYbYS6WxSbIA</span><br><span class="line">&gt; &amp;redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>E步骤中，认证服务器发送的HTTP回复，包含以下参数：</p>
+<p>-access_token：表示访问令牌，必选项。<br>-token_type：表示令牌类型，该值大小写不敏感，必选项，可以是bearer类型或mac类型。<br>-expires_in：表示过期时间，单位为秒。如果省略该参数，必须其他方式设置过期时间。<br>-refresh_token：表示更新令牌，用来获取下一次的访问令牌，可选项。<br>-scope：表示权限范围，如果与客户端申请的范围一致，此项可省略。</p>
+<p>下面是一个例子。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;      HTTP/1.1 200 OK</span><br><span class="line">&gt;      Content-Type: application/json;charset=UTF-8</span><br><span class="line">&gt;      Cache-Control: no-store</span><br><span class="line">&gt;      Pragma: no-cache</span><br><span class="line">&gt;</span><br><span class="line">&gt;      &#123;</span><br><span class="line">&gt;        <span class="string">&quot;access_token&quot;</span>:<span class="string">&quot;2YotnFZFEjr1zCsicMWpAA&quot;</span>,</span><br><span class="line">&gt;        <span class="string">&quot;token_type&quot;</span>:<span class="string">&quot;example&quot;</span>,</span><br><span class="line">&gt;        <span class="string">&quot;expires_in&quot;</span>:3600,</span><br><span class="line">&gt;        <span class="string">&quot;refresh_token&quot;</span>:<span class="string">&quot;tGzv3JOkF0XG5Qx2TlKWIA&quot;</span>,</span><br><span class="line">&gt;        <span class="string">&quot;example_parameter&quot;</span>:<span class="string">&quot;example_value&quot;</span></span><br><span class="line">&gt;      &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>从上面代码可以看到，相关参数使用JSON格式发送（Content-Type: application&#x2F;json）。此外，HTTP头信息中明确指定不得缓存。</p>
+<h2 id="七、简化模式"><a href="#七、简化模式" class="headerlink" title="七、简化模式"></a>七、简化模式</h2><p>简化模式（implicit grant type）不通过第三方应用程序的服务器，直接在浏览器中向认证服务器申请令牌，跳过了”授权码”这个步骤，因此得名。所有步骤在浏览器中完成，令牌对访问者是可见的，且客户端不需要认证。</p>
+<p><img src="/../images/202e8e80d8b1740f38bde7a3d889e088.jpg" alt="简化模式"></p>
+<p>它的步骤如下：</p>
+<blockquote>
+<p>（A）客户端将用户导向认证服务器。</p>
+<p>（B）用户决定是否给于客户端授权。</p>
+<p>（C）假设用户给予授权，认证服务器将用户导向客户端指定的”重定向URI”，并在URI的Hash部分包含了访问令牌。</p>
+<p>（D）浏览器向资源服务器发出请求，其中不包括上一步收到的Hash值。</p>
+<p>（E）资源服务器返回一个网页，其中包含的代码可以获取Hash值中的令牌。</p>
+<p>（F）浏览器执行上一步获得的脚本，提取出令牌。</p>
+<p>（G）浏览器将令牌发给客户端。</p>
+</blockquote>
+<p>下面是上面这些步骤所需要的参数。</p>
+<p>A步骤中，客户端发出的HTTP请求，包含以下参数：</p>
+<ul>
+<li>response_type：表示授权类型，此处的值固定为”token”，必选项。</li>
+<li>client_id：表示客户端的ID，必选项。</li>
+<li>redirect_uri：表示重定向的URI，可选项。</li>
+<li>scope：表示权限范围，可选项。</li>
+<li>state：表示客户端的当前状态，可以指定任意值，认证服务器会原封不动地返回这个值。</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;     GET /authorize?response_type=token&amp;client_id=s6BhdRkqt3&amp;state=xyz</span><br><span class="line">&gt;         &amp;redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1</span><br><span class="line">&gt;     Host: server.example.com</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>C步骤中，认证服务器回应客户端的URI，包含以下参数：</p>
+<ul>
+<li>access_token：表示访问令牌，必选项。</li>
+<li>token_type：表示令牌类型，该值大小写不敏感，必选项。</li>
+<li>expires_in：表示过期时间，单位为秒。如果省略该参数，必须其他方式设置过期时间。</li>
+<li>scope：表示权限范围，如果与客户端申请的范围一致，此项可省略。</li>
+<li>state：如果客户端的请求中包含这个参数，认证服务器的回应也必须一模一样包含这个参数。<br>下面是一个例子。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;      HTTP/1.1 302 Found</span><br><span class="line">&gt;      Location: http://example.com/cb<span class="comment">#access_token=2YotnFZFEjr1zCsicMWpAA</span></span><br><span class="line">&gt;                &amp;state=xyz&amp;token_type=example&amp;expires_in=3600</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中，认证服务器用HTTP头信息的Location栏，指定浏览器重定向的网址。注意，在这个网址的Hash部分包含了令牌。</p>
+<p>根据上面的D步骤，下一步浏览器会访问Location指定的网址，但是Hash部分不会发送。接下来的E步骤，服务提供商的资源服务器发送过来的代码，会提取出Hash中的令牌。</p>
+<h2 id="八、密码模式"><a href="#八、密码模式" class="headerlink" title="八、密码模式"></a>八、密码模式</h2><p>密码模式（Resource Owner Password Credentials Grant）中，用户向客户端提供自己的用户名和密码。客户端使用这些信息，向”服务商提供商”索要授权。</p>
+<p>在这种模式中，用户必须把自己的密码给客户端，但是客户端不得储存密码。这通常用在用户对客户端高度信任的情况下，比如客户端是操作系统的一部分，或者由一个著名公司出品。而认证服务器只有在其他授权模式无法执行的情况下，才能考虑使用这种模式。</p>
+<p><img src="/../images/1e7d96e9ed5ab025afd37c1ca97d1b39.jpg" alt="密码模式"></p>
+<p>它的步骤如下：</p>
+<blockquote>
+<p>（A）用户向客户端提供用户名和密码。</p>
+<p>（B）客户端将用户名和密码发给认证服务器，向后者请求令牌。</p>
+<p>（C）认证服务器确认无误后，向客户端提供访问令牌。</p>
+</blockquote>
+<p>B步骤中，客户端发出的HTTP请求，包含以下参数：</p>
+<ul>
+<li>grant_type：表示授权类型，此处的值固定为”password”，必选项。</li>
+<li>username：表示用户名，必选项。</li>
+<li>password：表示用户的密码，必选项。</li>
+<li>scope：表示权限范围，可选项。<br>下面是一个例子。</li>
+</ul>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;      POST /token HTTP/1.1</span><br><span class="line">&gt;      Host: server.example.com</span><br><span class="line">&gt;      Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW</span><br><span class="line">&gt;      Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt;</span><br><span class="line">&gt;      grant_type=password&amp;username=johndoe&amp;password=A3ddj3w</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>C步骤中，认证服务器向客户端发送访问令牌，下面是一个例子。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;      HTTP/1.1 200 OK</span><br><span class="line">&gt;      Content-Type: application/json;charset=UTF-8</span><br><span class="line">&gt;      Cache-Control: no-store</span><br><span class="line">&gt;      Pragma: no-cache</span><br><span class="line">&gt;</span><br><span class="line">&gt;      &#123;</span><br><span class="line">&gt;        &quot;access_token&quot;:&quot;2YotnFZFEjr1zCsicMWpAA&quot;,</span><br><span class="line">&gt;        &quot;token_type&quot;:&quot;example&quot;,</span><br><span class="line">&gt;        &quot;expires_in&quot;:3600,</span><br><span class="line">&gt;        &quot;refresh_token&quot;:&quot;tGzv3JOkF0XG5Qx2TlKWIA&quot;,</span><br><span class="line">&gt;        &quot;example_parameter&quot;:&quot;example_value&quot;</span><br><span class="line">&gt;      &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，各个参数的含义参见《授权码模式》一节。</p>
+<p>整个过程中，客户端不得保存用户的密码。</p>
+<h2 id="九、客户端模式"><a href="#九、客户端模式" class="headerlink" title="九、客户端模式"></a>九、客户端模式</h2><p>客户端模式（Client Credentials Grant）指客户端以自己的名义，而不是以用户的名义，向”服务提供商”进行认证。严格地说，客户端模式并不属于OAuth框架所要解决的问题。在这种模式中，用户直接向客户端注册，客户端以自己的名义要求”服务提供商”提供服务，其实不存在授权问题。</p>
+<p><img src="/../images/062fff24b9564ca9e0cbf4f702af9ee6.jpg" alt="客户端模式"></p>
+<p>它的步骤如下：</p>
+<blockquote>
+<p>（A）客户端向认证服务器进行身份认证，并要求一个访问令牌。</p>
+<p>（B）认证服务器确认无误后，向客户端提供访问令牌。</p>
+</blockquote>
+<p>A步骤中，客户端发出的HTTP请求，包含以下参数：</p>
+<ul>
+<li>granttype：表示授权类型，此处的值固定为”clientcredentials”，必选项。</li>
+<li>scope：表示权限范围，可选项。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;      POST /token HTTP/1.1</span><br><span class="line">&gt;      Host: server.example.com</span><br><span class="line">&gt;      Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW</span><br><span class="line">&gt;      Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt;</span><br><span class="line">&gt;      grant_type=client_credentials</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>认证服务器必须以某种方式，验证客户端身份。</p>
+<p>B步骤中，认证服务器向客户端发送访问令牌，下面是一个例子。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;      HTTP/1.1 200 OK</span><br><span class="line">&gt;      Content-Type: application/json;charset=UTF-8</span><br><span class="line">&gt;      Cache-Control: no-store</span><br><span class="line">&gt;      Pragma: no-cache</span><br><span class="line">&gt;</span><br><span class="line">&gt;      &#123;</span><br><span class="line">&gt;        <span class="string">&quot;access_token&quot;</span>:<span class="string">&quot;2YotnFZFEjr1zCsicMWpAA&quot;</span>,</span><br><span class="line">&gt;        <span class="string">&quot;token_type&quot;</span>:<span class="string">&quot;example&quot;</span>,</span><br><span class="line">&gt;        <span class="string">&quot;expires_in&quot;</span>:3600,</span><br><span class="line">&gt;        <span class="string">&quot;example_parameter&quot;</span>:<span class="string">&quot;example_value&quot;</span></span><br><span class="line">&gt;      &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，各个参数的含义参见《授权码模式》一节。</p>
+<h2 id="十、更新令牌"><a href="#十、更新令牌" class="headerlink" title="十、更新令牌"></a>十、更新令牌</h2><p>如果用户访问的时候，客户端的”访问令牌”已经过期，则需要使用”更新令牌”申请一个新的访问令牌。</p>
+<p>客户端发出更新令牌的HTTP请求，包含以下参数：</p>
+<ul>
+<li>granttype：表示使用的授权模式，此处的值固定为”refreshtoken”，必选项。</li>
+<li>refresh_token：表示早前收到的更新令牌，必选项。</li>
+<li>scope：表示申请的授权范围，不可以超出上一次申请的范围，如果省略该参数，则表示与上一次一致。</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;      POST /token HTTP/1.1</span><br><span class="line">&gt;      Host: server.example.com</span><br><span class="line">&gt;      Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW</span><br><span class="line">&gt;      Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt;</span><br><span class="line">&gt;      grant_type=refresh_token&amp;refresh_token=tGzv3JOkF0XG5Qx2TlKWIA</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/27/what-is-autogpt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Musings">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/12/27/what-is-autogpt/" itemprop="url">what-is-autogpt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-12-27T22:25:46+08:00">
+                2023-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/images/autogpt-1.jpg" alt="autogpt"></p>
+<h1 id="AutoGPT-The-Fusion-of-GPT-4-and-GPT-3-5-for-Autonomous-Task-Execution"><a href="#AutoGPT-The-Fusion-of-GPT-4-and-GPT-3-5-for-Autonomous-Task-Execution" class="headerlink" title="AutoGPT: The Fusion of GPT-4 and GPT-3.5 for Autonomous Task Execution"></a><strong>AutoGPT: The Fusion of GPT-4 and GPT-3.5 for Autonomous Task Execution</strong></h1><p>AutoGPT is an innovative project based on OpenAI’s GPT-4 and GPT-3.5 models, focused on autonomously executing a variety of tasks. This article provides an overview of AutoGPT, with an emphasis on its technical principles and application scenarios.</p>
+<h2 id="What-is-AutoGPT"><a href="#What-is-AutoGPT" class="headerlink" title="What is AutoGPT?"></a><strong>What is AutoGPT?</strong></h2><p>AutoGPT is an open-source, experimental application that leverages the GPT-4 language model as its core. It is capable of autonomously completing specific goals set by users. This represents one of the first instances of fully autonomous operation of GPT-4, demonstrating advanced AI capabilities in achieving diverse objectives.</p>
+<h2 id="Technical-Principles-of-AutoGPT"><a href="#Technical-Principles-of-AutoGPT" class="headerlink" title="Technical Principles of AutoGPT"></a><strong>Technical Principles of AutoGPT</strong></h2><ol>
+<li><strong>Core “Brain”</strong>: Utilizes the ChatGPT-4 language model for decision-making, with the option to switch to GPT-3.5.</li>
+<li><strong>Memory Management</strong>: Features both long and short-term memory abilities, learning from past experiences to generate more accurate outcomes.</li>
+<li><strong>Internet Access</strong>: Capable of web searches and information gathering, a feature not present in standard ChatGPT models.</li>
+<li><strong>File Handling</strong>: Able to manipulate files, accessing and summarizing data.</li>
+</ol>
+<h2 id="Application-Scenarios"><a href="#Application-Scenarios" class="headerlink" title="Application Scenarios"></a><strong>Application Scenarios</strong></h2><ul>
+<li><strong>Code Writing and Execution</strong>: Generates and executes code based on specific prompts.</li>
+<li><strong>System Command Execution</strong>: Executes shell commands for system-level tasks.</li>
+<li><strong>Code Analysis</strong>: Analyzes code snippets and offers suggestions for improvement.</li>
+</ul>
+<h2 id="Potential-of-AutoGPT"><a href="#Potential-of-AutoGPT" class="headerlink" title="Potential of AutoGPT"></a><strong>Potential of AutoGPT</strong></h2><p>AutoGPT represents a significant advancement in the field of autonomous AI agents. While it is not a complete substitute for human expertise, it can be considered as an AI intern, requiring human oversight and guidance. As AutoGPT continues to be refined and optimized by more contributors, it is expected to become more robust and capable. However, its effectiveness will vary depending on the task.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a><strong>Conclusion</strong></h2><p>AutoGPT showcases the evolving landscape of AI, pushing the boundaries of what autonomous systems can achieve. Its ability to learn, adapt, and autonomously perform a variety of tasks makes it a fascinating development in AI. Despite being in its early stages and having some limitations, AutoGPT’s potential applications in various fields are vast, indicating a future where AI agents play a more significant role in automating and optimizing tasks.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/05/create-web-site-by-chatgpt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Musings">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/12/05/create-web-site-by-chatgpt/" itemprop="url">create web site by chatgpt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-12-05T23:59:19+08:00">
+                2023-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="prompt"><a href="#prompt" class="headerlink" title="prompt"></a>prompt</h2><p>How to create a simple and elegant page which has one button recording user audio, using nodejs and next.js framework,Give me step by step instructions and full source code,<br>Including instructions about install nodejs and next.js</p>
+<h2 id="chatgpt"><a href="#chatgpt" class="headerlink" title="chatgpt"></a>chatgpt</h2><p>Certainly! Here is the code in original markdown format:</p>
+<h3 id="1-Install-Node-js"><a href="#1-Install-Node-js" class="headerlink" title="1. Install Node.js:"></a>1. <strong>Install Node.js:</strong></h3><p>If you haven’t installed Node.js on your machine, you can download it from the official website: <a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js</a>.</p>
+<p>Follow the installation instructions for your operating system.</p>
+<h3 id="2-Verify-Node-js-Installation"><a href="#2-Verify-Node-js-Installation" class="headerlink" title="2. Verify Node.js Installation:"></a>2. <strong>Verify Node.js Installation:</strong></h3><p>Open a terminal and run the following commands to verify that Node.js and npm (Node Package Manager) are installed:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>You should see version numbers for both Node.js and npm.</p>
+<h3 id="3-Create-a-Next-js-Project"><a href="#3-Create-a-Next-js-Project" class="headerlink" title="3. Create a Next.js Project:"></a>3. <strong>Create a Next.js Project:</strong></h3><p>Open a terminal and run the following commands to create a new Next.js project:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx create-next-app my-audio-recorder</span><br><span class="line"><span class="built_in">cd</span> my-audio-recorder</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Navigate-to-Project-Directory"><a href="#4-Navigate-to-Project-Directory" class="headerlink" title="4. Navigate to Project Directory:"></a>4. <strong>Navigate to Project Directory:</strong></h3><p>Change into the project directory using the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> my-audio-recorder</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Install-Dependencies"><a href="#5-Install-Dependencies" class="headerlink" title="5. Install Dependencies:"></a>5. <strong>Install Dependencies:</strong></h3><p>Install the necessary dependencies for your project:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install next react react-dom recorder-js</span><br></pre></td></tr></table></figure>
+
+<p>This will install Next.js, React, ReactDOM, and the <code>recorder-js</code> library.</p>
+<h3 id="6-Run-the-Next-js-App"><a href="#6-Run-the-Next-js-App" class="headerlink" title="6. Run the Next.js App:"></a>6. <strong>Run the Next.js App:</strong></h3><p>Start your Next.js development server:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>Open your browser and visit <code>http://localhost:3000</code> to see your Next.js app.</p>
+<p>Now, you have Node.js installed, a Next.js project set up, and the required dependencies installed for building the audio recorder page. Follow the previous instructions for creating the <code>AudioRecorder</code> component and using it in your Next.js app.</p>
+<h2 id="verify"><a href="#verify" class="headerlink" title="verify"></a>verify</h2><h3 id="check-fail"><a href="#check-fail" class="headerlink" title="check fail"></a><font color="#dd0000">check fail</font></h3><p>after run the code generated by ai, click recoder button but failed record voice.</p>
+<h3 id="integrate-record-js"><a href="#integrate-record-js" class="headerlink" title="integrate record.js"></a><font color="green">integrate record.js</font></h3><h4 id="record-h5-fils"><a href="#record-h5-fils" class="headerlink" title="record h5 fils"></a>record h5 fils</h4><ol>
+<li>style.css</li>
+<li>app.js</li>
+<li>recorder.js</li>
+<li>index.html</li>
+</ol>
+<h4 id="modify-vue-project"><a href="#modify-vue-project" class="headerlink" title="modify vue project"></a>modify vue project</h4><ol>
+<li>copy recorder.js into .&#x2F;public&#x2F;</li>
+<li>import recorder.js file in index.html</li>
+<li>copy style.css file into assets&#x2F;</li>
+<li>create recorder.vue in src&#x2F;components&#x2F;record and add index.html content</li>
+<li>copy app.js into src&#x2F;components&#x2F;record and import in recorder.vue</li>
+<li>talk is cheap,show you <a target="_blank" rel="noopener" href="https://github.com/szlfwolf/simple-recorderjs-demo/tree/vuejs">full code</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/Implement-Google-Authentication-for-PostgreSQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Musings">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/12/04/Implement-Google-Authentication-for-PostgreSQL/" itemprop="url">Implement Google Authentication for PostgreSQL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-12-04T20:07:04+08:00">
+                2023-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Implementing-Google-Authentication-for-PostgreSQL-on-Azure-using-Google-Service-Account"><a href="#Implementing-Google-Authentication-for-PostgreSQL-on-Azure-using-Google-Service-Account" class="headerlink" title="Implementing Google Authentication for PostgreSQL on Azure using Google Service Account"></a>Implementing Google Authentication for PostgreSQL on Azure using Google Service Account</h2><h3 id="1-Create-a-Service-Account"><a href="#1-Create-a-Service-Account" class="headerlink" title="1. Create a Service Account"></a>1. Create a Service Account</h3><ul>
+<li>Go to the <a target="_blank" rel="noopener" href="https://console.cloud.google.com/">Google Cloud Console</a>.</li>
+<li>Navigate to “IAM &amp; Admin” &gt; “Service accounts.”</li>
+<li>Create a new service account and download the JSON key file associated with it.</li>
+</ul>
+<h3 id="2-Configure-PostgreSQL-on-Azure"><a href="#2-Configure-PostgreSQL-on-Azure" class="headerlink" title="2. Configure PostgreSQL on Azure"></a>2. Configure PostgreSQL on Azure</h3><ul>
+<li>In your Azure Database for PostgreSQL instance, go to the “Connection security” settings.</li>
+<li>Add the IP addresses or ranges used by the Google Service Account to allow connections.</li>
+</ul>
+<h3 id="3-Modify-PostgreSQL-pg-hba-conf"><a href="#3-Modify-PostgreSQL-pg-hba-conf" class="headerlink" title="3. Modify PostgreSQL pg_hba.conf"></a>3. Modify PostgreSQL pg_hba.conf</h3><ul>
+<li><p>Locate your PostgreSQL data directory, commonly found in <code>/etc/postgresql/&lt;version&gt;/main/</code> or <code>/var/lib/pgsql/&lt;version&gt;/data/</code>.</p>
+</li>
+<li><p>Open the <code>pg_hba.conf</code> file in a text editor.</p>
+</li>
+<li><p>Add an entry for the Google Service Account IP:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">host    all    all    &lt;Google_Service_Account_IP&gt;    md5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Save the pg_hba.conf file.</p>
+</li>
+</ul>
+<h3 id="4-Reload-PostgreSQL"><a href="#4-Reload-PostgreSQL" class="headerlink" title="4. Reload PostgreSQL"></a>4. Reload PostgreSQL</h3><p>To apply the changes, you need to reload PostgreSQL. You can do this by restarting the PostgreSQL service or by using the pg_ctl command. For example:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service postgresql restart</span><br></pre></td></tr></table></figure>
+<p>  or</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pg_ctl reload -D /path/to/your/postgres/data</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Grant-Permissions-in-PostgreSQL"><a href="#5-Grant-Permissions-in-PostgreSQL" class="headerlink" title="5. Grant Permissions in PostgreSQL"></a>5. Grant Permissions in PostgreSQL</h3><p>Connect to your PostgreSQL database using an account with sufficient privileges.</p>
+<p>Grant necessary permissions to the Google Service Account user:</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">CONNECT</span> <span class="keyword">ON</span> DATABASE your_database <span class="keyword">TO</span> your_service_account_user;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-Secure-Your-Service-Account-Key"><a href="#6-Secure-Your-Service-Account-Key" class="headerlink" title="6. Secure Your Service Account Key"></a>6. Secure Your Service Account Key</h3><p>Ensure the security of your Google Service Account key. Store it in a secure location accessible only to authorized individuals or processes.</p>
+<h3 id="7-Connect-from-Application"><a href="#7-Connect-from-Application" class="headerlink" title="7. Connect from Application"></a>7. Connect from Application</h3><p>In your application code, use the Google Service Account key to authenticate and connect to the PostgreSQL database.</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">from</span> google.auth.transport.requests <span class="keyword">import</span> Request</span><br><span class="line"><span class="keyword">from</span> google.oauth2 <span class="keyword">import</span> service_account</span><br><span class="line"></span><br><span class="line"><span class="comment"># Path to your Google Service Account JSON key file</span></span><br><span class="line">google_key_path = <span class="string">&#x27;/path/to/your/google-service-account-key.json&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Your PostgreSQL connection parameters</span></span><br><span class="line">database_url = <span class="string">&#x27;postgresql://username:password@hostname:port/database_name&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Load Google Service Account credentials</span></span><br><span class="line">credentials = service_account.Credentials.from_service_account_file(</span><br><span class="line">    google_key_path, scopes=[<span class="string">&#x27;https://www.googleapis.com/auth/cloud-platform&#x27;</span>]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create an SQLAlchemy engine with Google Authentication</span></span><br><span class="line">engine = create_engine(database_url, connect_args=&#123;<span class="string">&#x27;credentials&#x27;</span>: credentials&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a session</span></span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line">session = Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now you can use the &#x27;session&#x27; object to interact with your PostgreSQL database</span></span><br><span class="line"><span class="comment"># For example:</span></span><br><span class="line"><span class="comment"># result = session.execute(&quot;SELECT * FROM your_table&quot;)</span></span><br><span class="line"><span class="comment"># print(result.fetchall())</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Don&#x27;t forget to close the session when done</span></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+
+<p>Replace &#x2F;path&#x2F;to&#x2F;your&#x2F;google-service-account-key.json with the actual path to your Google Service Account JSON key file. Also, update the database_url with your PostgreSQL connection parameters.</p>
+<p>This code snippet uses the google-auth library to handle Google Authentication. Make sure to install the required library using:  </p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install google-auth google-auth-oauthlib google-auth-httplib2</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/DevOps-with-Open-Source-Tools-and-GitHub/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Musings">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/12/04/DevOps-with-Open-Source-Tools-and-GitHub/" itemprop="url">DevOps with Open Source Tools and GitHub</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-12-04T09:39:12+08:00">
+                2023-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>DevOps is a set of practices that involves the collaboration between development and operations teams to automate and streamline the software delivery process. Open source tools have become an integral part of DevOps practices as they provide flexibility, scalability, and cost-effectiveness. In this post, we will discuss how DevOps can be implemented using open source tools and GitHub.</p>
+<h2 id="Code-Repository"><a href="#Code-Repository" class="headerlink" title="Code Repository"></a>Code Repository</h2><p>GitHub is a popular code repository that allows developers to collaborate on code and manage version control. It provides a centralized location for storing and managing code, making it easy for developers to work together on projects. GitHub also offers features such as pull requests, issue tracking, and code reviews, which help teams to collaborate and ensure code quality.</p>
+<h2 id="Continuous-Integration-and-Continuous-Deployment"><a href="#Continuous-Integration-and-Continuous-Deployment" class="headerlink" title="Continuous Integration and Continuous Deployment"></a>Continuous Integration and Continuous Deployment</h2><p>Continuous Integration (CI) and Continuous Deployment (CD) are essential components of DevOps. CI involves automating the process of building and testing code changes, while CD involves automating the process of deploying code changes to production. Open source tools such as Jenkins, Travis CI, and CircleCI can be used to implement CI&#x2F;CD pipelines. These tools integrate with GitHub to automatically build, test, and deploy code changes.</p>
+<h2 id="Infrastructure-as-Code"><a href="#Infrastructure-as-Code" class="headerlink" title="Infrastructure as Code"></a>Infrastructure as Code</h2><p>Infrastructure as Code (IaC) is the practice of managing infrastructure using code. It involves defining infrastructure resources such as servers, networks, and databases using code. Open source tools such as Terraform, Ansible, and Chef can be used to implement IaC. These tools integrate with GitHub to manage infrastructure changes through version control.</p>
+<h2 id="Monitoring-and-Logging"><a href="#Monitoring-and-Logging" class="headerlink" title="Monitoring and Logging"></a>Monitoring and Logging</h2><p>Monitoring and logging are essential components of DevOps. They involve collecting and analyzing data from applications and infrastructure to identify issues and improve performance. Open source tools such as Prometheus, Grafana, and ELK Stack can be used to implement monitoring and logging. These tools integrate with GitHub to provide visibility into application and infrastructure performance.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>In conclusion, DevOps can be implemented using open source tools and GitHub. Code repositories such as GitHub provide a centralized location for managing code, while CI&#x2F;CD tools automate the process of building, testing, and deploying code changes. IaC tools enable the management of infrastructure using code, while monitoring and logging tools provide visibility into application and infrastructure performance. By leveraging open source tools and GitHub, teams can implement DevOps practices that are flexible, scalable, and cost-effective.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/03/Create-free-blog-by-github-pages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Musings">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/12/03/Create-free-blog-by-github-pages/" itemprop="url">Creating a Personal Blog with GitHub Pages and Hexo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-12-03T23:39:12+08:00">
+                2023-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites:"></a>Prerequisites:</h2><p>Ensure you have the following prerequisites:</p>
+<ul>
+<li><strong>Git:</strong> Familiarity with basic Git commands like <code>git clone</code>, <code>git add</code>, <code>git commit</code>, and <code>git push</code>.</li>
+<li><strong>Markdown:</strong> Proficiency in Markdown syntax, as GitHub Pages typically uses Markdown for blog posts.</li>
+<li><strong>Node.js:</strong> Installation of Node.js and npm (Node Package Manager).</li>
+</ul>
+<h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps:"></a>Steps:</h2><h3 id="1-Create-a-GitHub-Repository"><a href="#1-Create-a-GitHub-Repository" class="headerlink" title="1. Create a GitHub Repository"></a>1. Create a GitHub Repository</h3><ol>
+<li>Log in to your GitHub account, click the ‘+’ in the upper right corner, and select “New repository.”</li>
+<li>In the repository settings, name it <code>&lt;your-username&gt;.github.io</code> (the repository name must match your GitHub username).</li>
+<li>Choose a license (you can opt for the MIT License).</li>
+<li>Click the “Create repository” button.</li>
+</ol>
+<h3 id="2-Clone-the-Repository-Locally"><a href="#2-Clone-the-Repository-Locally" class="headerlink" title="2. Clone the Repository Locally"></a>2. Clone the Repository Locally</h3><p>Use Git commands to clone the GitHub repository you just created to your local machine:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/your-username/your-username.github.io.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Create-a-Hexo-Project-Continued"><a href="#3-Create-a-Hexo-Project-Continued" class="headerlink" title="3. Create a Hexo Project (Continued)"></a>3. Create a Hexo Project (Continued)</h3><ol>
+<li><p>Ensure your local environment has Node.js and npm installed.</p>
+</li>
+<li><p>Install Hexo CLI:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>In the terminal, navigate to your project directory:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> your-username.github.io</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create a new Hexo project:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install Hexo dependencies:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="4-Write-Blog-Posts"><a href="#4-Write-Blog-Posts" class="headerlink" title="4. Write Blog Posts"></a>4. Write Blog Posts</h3><p>Create Markdown files in the <code>_posts</code> directory using Hexo commands:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;Your Blog Post Title&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Edit the generated Markdown file in the source&#x2F;_posts directory.</p>
+<p>Here’s an example of what the generated file might look like (source&#x2F;_posts&#x2F;your-blog-post-title.md):</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Your Blog Post Title</span><br><span class="line">date: 2023-12-01</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br><span class="line"><span class="section">  - GitHub Pages</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">Write your blog content here using Markdown syntax. You can include text, images, links, and more.</span><br><span class="line"></span><br><span class="line">Save the file when you&#x27;re done editing.</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Deploy-Your-Blog"><a href="#5-Deploy-Your-Blog" class="headerlink" title="5. Deploy Your Blog"></a>5. Deploy Your Blog</h3><p>Generate static files and deploy your blog to GitHub Pages:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-View-Your-Blog"><a href="#6-View-Your-Blog" class="headerlink" title="6. View Your Blog"></a>6. View Your Blog</h3><p>Visit <a target="_blank" rel="noopener" href="https://your-username.github.io/">https://your-username.github.io</a> to see your Hexo-powered blog.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>You’ve successfully created a personal blog using GitHub Pages and Hexo. Here’s a quick recap of the key steps:</p>
+<ol>
+<li><p><strong>Create a GitHub Repository:</strong></p>
+<ul>
+<li>Log in to GitHub, create a new repository named <code>&lt;your-username&gt;.github.io</code>.</li>
+<li>Choose a license and create the repository.</li>
+</ul>
+</li>
+<li><p><strong>Clone the Repository Locally:</strong></p>
+<ul>
+<li>Use Git to clone the repository to your local machine.</li>
+</ul>
+</li>
+<li><p><strong>Create a Hexo Project:</strong></p>
+<ul>
+<li>Ensure Node.js and npm are installed.</li>
+<li>Install Hexo CLI globally: <code>npm install -g hexo-cli</code>.</li>
+<li>Navigate to your project directory and run <code>hexo init .</code> to create a new Hexo project.</li>
+<li>Install Hexo dependencies: <code>npm install</code>.</li>
+</ul>
+</li>
+<li><p><strong>Write Blog Posts:</strong></p>
+<ul>
+<li>Use Hexo commands to create new blog posts in the <code>_posts</code> directory.</li>
+<li>Edit the generated Markdown files in <code>source/_posts</code>.</li>
+</ul>
+</li>
+<li><p><strong>Deploy Your Blog:</strong></p>
+<ul>
+<li>Generate static files with <code>hexo generate</code>.</li>
+<li>Deploy your blog to GitHub Pages with <code>hexo deploy</code>.</li>
+</ul>
+</li>
+<li><p><strong>View Your Blog:</strong></p>
+<ul>
+<li>Visit <code>https://your-username.github.io</code> to see your Hexo-powered blog.</li>
+</ul>
+</li>
+</ol>
+<p>Enjoy your blogging journey! Keep creating engaging content and updating your blog as you go.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/03/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Musings">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/12/03/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-12-03T20:39:12+08:00">
+                2023-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lfwolf</span>
+
+  
+  <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn">粤ICP备2023157164号</a>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
